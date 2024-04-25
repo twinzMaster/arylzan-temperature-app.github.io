@@ -1,0 +1,229 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+    --border-radius: 20px;
+    --display-font-size: 20px;
+    --input-font-size: 18px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+}
+
+body {
+    padding: 30px 400px;
+}
+
+label,
+p {
+    font-size: var(--display-font-size);
+}
+
+button,
+input,
+textarea {
+    font-size: var(--input-font-size);
+}
+
+.error {
+    display: none;
+    background-color: crimson;
+    color: white;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+}
+
+header {
+    font-size: 20px;
+    text-align: center;
+    background: cornflowerblue;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    padding: 20px;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    background-color: lightgray;
+    padding: 50px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+    z-index: 0;
+}
+
+.box-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.row {
+    width: 100%;
+}
+
+.row-btn {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row-calculation {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.row-btn-group > button {
+    margin-top: 5px;
+    width: 49.2%;
+    display: inline-block;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: var(--border-radius);
+}
+
+.row-instruction {
+    margin-top: 50px;
+    margin-bottom: 5px;
+}
+
+.row-instruction > label {
+    font-weight: bold;
+}
+
+.row-instruction > p > span {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.row-instruction > hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 2px solid gray;
+    border-radius: var(--border-radius);
+}
+
+.convert {
+    background: cornflowerblue;
+    color: white;
+    transition: 250ms ease-in-out;
+}
+
+.reset {
+    background: crimson;
+    color: white;
+    transition: 250ms ease-in-out;
+}
+
+.convert:focus,
+.convert:hover {
+    color: cornflowerblue;
+    background: white;
+}
+
+.reset:focus,
+.reset:hover {
+    color: crimson;
+    background: white;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border-radius: var(--border-radius);
+    border: 2px solid gray;
+    padding: 10px;
+    transition: 250ms ease-in-out;
+    outline: none;
+}
+
+input:focus,
+input:hover,
+textarea:focus,
+textarea:hover {
+    border: 4px solid black;
+}
+
+.btn-reverse {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    z-index: 5;
+    border: 8px solid lightgray;
+    transition: 300ms ease-in-out;
+}
+
+.hr-btn-reverse {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: var(--border-radius);
+}
+
+.btn-reverse > i {
+    /* animation: rotate 600ms linear; */
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    border-radius: var(--border-radius);
+    resize: none;
+    padding: 10px;
+    border: 2px solid gray;
+    transition: 250ms ease-in-out;
+    outline: none;
+}
+
+footer {
+    left: 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    background: cornflowerblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes rotateBack {
+    0% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+}
